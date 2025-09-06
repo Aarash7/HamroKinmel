@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register • Hamro Kinmel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Content -->
+    <header>
+        <!-- Navigation -->
+        <div id="navbar-container"></div>
+    </header>
+
+    <!-- Register Page -->
+    <section class="auth-form">
+        <h2> Create an Account</h2>
+        <form id="registerForm">
+            <label class="label" for="regUsername">Username</label>
+            <input type="text" id="regUsername" class="input" minlength="3" maxlength="15" required>
+
+            <label class="label" for="regEmail">Email</label>
+            <input type="email" id="regEmail" class="input" required>
+
+            <label class="label" for="regPassword">Password</label>
+            <input type="password" id="regPassword" class="input" minlength="8" required>
+
+            <label class="label" for="regConfirmPassword">Confirm Password</label>
+            <input type="password" id="regConfirmPassword" class="input" required>
+
+            <label class="label" for="regPhone">Phone</label>
+            <input type="tel" id="regPhone" class="input" pattern="[0-9]+" title="Please enter numbers only"  required>
+
+            <label class="label" for="regAddress">Address</label>
+            <textarea id="regAddress" class="textarea" rows="3" required></textarea>
+
+            <button type="submit" class="button button-primary button-full-width">Create Account</button>   
+        </form> 
+        <p class="auth-link">Already have an account? <a href="#" id="showLogin">Login here</a></p>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+    
+
+    <footer>
+        <p>&copy ICT930 HamroKinmel Demo 2025. All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

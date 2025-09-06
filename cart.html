@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart • Hamro Kinmel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div id="navbar-container"></div>
+  </header>
+
+  <main id="cartPage" class="page">
+    <h1>Your Cart</h1>
+    <!-- Empty cart message -->
+    <section class="empty-message">
+      <div id="cartEmpty" class="empty hidden">
+        Your cart is empty. <a href="product.html">Browse products</a>.
+      </div>
+    </section> 
+    <!-- Cart items table container -->
+    <Section class="table-item">
+      <div id="cartTableWrap" class="table-responsive hidden">
+        <table class="table" aria-label="Shopping cart items" id="cartTable">
+          <thead>
+            <tr>
+              <th style="width:64px;">Image</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th style="width:120px;">Qty</th>
+              <th>Line Total</th>
+              <th style="width:90px;">Action</th>
+            </tr>
+          </thead>
+          <tbody id="cartBody"></tbody>
+        </table>
+      </div>
+    </Section>
+    <!-- Summary and Checkout -->
+    <section class="cartSummary">
+      <div id="cartSummaryWrap" class="cart-summary hidden">
+        <div class="summary-box">
+          <h3>Order Summary</h3>
+          <div class="summary-row"><span>Subtotal</span><span id="subtotalVal">$0.00</span></div>
+          <div class="summary-row"><span>Shipping</span><span id="shippingVal">$0.00</span></div>
+          <div class="summary-row total"><span>Total</span><span id="totalVal">$0.00</span></div>
+          <button id="checkoutButton" class="btn btn--primary">Proceed to Checkout</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Checkout</h2>
+        <button class="modal-close" id="closeCheckoutModal">×</button>
+        <form id="checkoutForm" novalidate>
+          <label for="coName" class="label">Full Name</label>
+          <input type="text" id="coName" class="input" required />
+      
+          <label for="coEmail" class="label">Email</label>
+          <input type="email" id="coEmail" class="input" required />
+        
+          <label for="coAddress" class="label">Shipping Address</label>
+          <textarea id="coAddress" class="form-control" rows="3" required></textarea>
+        
+          <label for="coPayment" class="label">Payment Method</label>
+          <select id="coPayment" class="input" required>
+            <option value="">Select…</option>
+            <option value="card">Credit/Debit Card</option>
+            <option value="cod">Cash on Delivery</option>
+          </select>
+          <label for="space" class="label"></label>
+          <button type="submit" class="button button-primary button-full-width">Place Order</button>
+        </form>
+      </div> 
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  </main>
+
+  <footer>
+    <p>&copy; ICT930 HamroKinmel Demo 2025. All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard • Hamro Kinmel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Content -->
+    <header>
+        <!-- Navigation -->
+        <div id="navbar-container"></div>
+    </header>
+
+    <main>
+        
+        <div class="dashboard-grid">
+            <h2>User Dashboard</h2>
+            <!-- Profile Section -->
+            <section class="card" aria-label="User Profile">
+                <h2>Profile Information</h2>
+                <div id="userProfile">
+                    <img src="https://images.unsplash.com/photo-1740252117044-2af197eea287" id="profileAvatar" class="profile-avatar" alt="User avatar"/>
+                    <p><strong>Name:</strong> <span id="profileName">Peter Dot</span></p>
+                    <p><strong>Email:</strong> <span id="profileEmail">peter12@example.com</span></p>
+                    <p><strong>Phone:</strong> <span id="profilePhone">+61 422815788</span></p>
+                    <button class="btn btn--primary" id="editProfileBtn">Edit Profile</button>
+                </div>
+            </section>
+            <!-- Order History -->
+            <section class="card" aria-label="Order History">
+                <h2>Order History</h2>
+                <div id="orderHistory">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; ICT930 HamroKinmel Demo 2025. All rights reserved</p>
+    </footer>
+
+    <!-- Edit Profile Modal -->
+    <div id="editModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Edit Profile</h2>
+            <button class="modal-close" id="closeeditModal">×</button>
+            <form id="editForm">
+            <label class="label" for="editName">Name</label>
+            <input type="text" id="editName" class="input" required>
+
+            <label class="label" for="editEmail">Email</label>
+            <input type="email" id="editEmail" class="input" required>
+
+            <label class="label" for="editPhone">Phone</label>
+            <input type="tel" id="editPhone" class="input" required>
+
+            <button type="submit" class="button button-primary button-full-width">Save Changes</button>
+            </form>
+        </div>
+    </div>
+   
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

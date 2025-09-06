@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products • Hamro Kinmel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div id="navbar-container"></div>
+  </header>
+
+  <main class="page" id="productsPage">
+    <div class="container">
+      <h1 class="mb-2">Products</h1>
+
+      <div class="product-controls">
+        <div class="filters" id="filterBar">
+          <select id="filterCategory" class="form-control">
+            <option value="">All Categories</option>
+          </select>
+          <input type="number" id="filterMin" class="form-control" placeholder="Min price" min="0" step="0.01">
+          <input type="number" id="filterMax" class="form-control" placeholder="Max price" min="0" step="0.01">
+          <select id="sortSelect" class="form-control">
+            <option value="">Sort: Default</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="name-asc">Name: A → Z</option>
+            <option value="name-desc">Name: Z → A</option>
+          </select>
+
+          <button id="applyFiltersBtn" class="btn btn--primary">Apply</button>
+          <button id="clearFiltersBtn" class="btn">Clear</button>
+        </div>
+
+        <div class="results-meta">
+          <span id="resultsText">0 results</span>
+        </div>
+      </div>
+
+      <div id="productGrid" class="product-grid"></div>
+      
+      <div id="emptyState" class="empty hidden">No products found for your filters/search.</div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; ICT930 HamroKinmel Demo 2025. All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

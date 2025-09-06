@@ -1,0 +1,53 @@
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <img src="Assets/logo.png" alt="🏪" class="logo" />
+      <h1>Hamro Kinmel</h1>
+    </div>
+
+    <div class="nav-menu" id="navMenu">
+      <!-- Note: no static 'active' class; JS will set the active link -->
+      <a href="index.html" class="nav-link" data-route="home">Home</a>
+      <a href="product.html" class="nav-link" data-route="products">Products</a>
+      <a href="about.html" class="nav-link" data-route="about">About</a>
+      <a href="dashboard.html" class="nav-link" id="dashboardMenu" data-route="dashboard">Dashboard</a>
+      <a href="admin.html" class="nav-link" data-route="admin">Admin</a>
+      <a href="cart.html" class="nav-link" data-route="cart">Cart</a>
+    </div>
+
+    <div class="nav-actions">
+      <div class="search-container">
+        <input type="search" id="searchInput" placeholder="Search products..." class="search-input">
+        <button id="searchBtn" class="search-btn">🔍</button>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button id="loginButton" class="btn btn--primary">Login</button>
+      <button id="registerButton" class="btn btn--secondary">Register</button>
+      <button id="logoutButton" class="btn btn--secondary" style="display:none;">Logout</button>
+      <button id="cartBtn" class="cart-btn">
+        🛒 <span id="cartBadge" class="cart-badge hidden">0</span>
+      </button>
+      <button class="nav-toggle" id="navToggle">☰</button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Login</h2>
+    <button class="modal-close" id="closeLoginModal">×</button>
+    <form id="loginForm">
+      <label class="label" for="loginUsernameOrEmail">Email or Username</label>
+      <input type="text" id="loginUsernameOrEmail" class="input" required>
+
+      <label class="label" for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" class="input" required>
+
+      <button type="submit" class="button button-primary button-full-width">Login</button>
+    </form>
+    <p class="auth-link">Don't have an account? <a href="register.html" id="showRegisterFromLogin">Register here</a></p>
+  </div>
+</div>

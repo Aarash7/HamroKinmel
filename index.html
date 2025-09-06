@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamro Kinmel</title>
+    <meta name="description" content="Your one-stop shop for electronics, fashion, books, sports gear, and home essentials">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Header Content -->
+    <header>
+        <!-- Navigation -->
+        <div id="navbar-container"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Home Page -->
+        <section id="homePage" class="page active">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Welcome to Hamro Kinmel</h1>
+                    <h4>Your one-stop shop for electronics, fashion, books, sports gear, and home essentials</h4>
+                    <button class="btn btn--primary" data-route="products" href="product.html">Shop Now</button>
+                </div>
+            </div>
+
+            <!-- Featured Products -->
+            <div class="container">
+                <section class="featured-section">
+                    <h2>Featured Products</h2>
+                    <div id="featuredProducts" class="product-grid"></div>
+                </section>
+            </div>
+
+            <!-- Scroll to Top Button -->
+            <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
+            <!-- Toast Notification -->
+            <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+        </section>
+        
+    </main>
+
+    
+
+    <!-- Footer Content -->
+    <footer>
+        <p>&copy ICT930 HamroKinmel Demo 2025. All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
