@@ -1,6 +1,12 @@
+<img width="1867" height="916" alt="image" src="https://github.com/user-attachments/assets/0f205ca1-df8f-4c31-9790-2861930fbe1c" />
+
 # Hamro Kinmel
 
 HTML/CSS/JS — A fully responsive navigation bar and the user dashboard as well. Written to make UI/UX great for both desktop and phones.
+
+---
+### Live Demo
+<a href="https://aarash7.github.io/HamroKinmel/">Click here for live demo</a>
 
 ---
 
